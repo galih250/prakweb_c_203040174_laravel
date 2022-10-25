@@ -29,5 +29,5 @@ Route::get('/about', function () {
         "image" => "profile.jpeg"
     ]);
 });
-Route::get('/blog', [PostController::class, 'index']);
-Route::get('posts/{slug}', [PostController::class, 'show']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
